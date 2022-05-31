@@ -7,17 +7,22 @@ class Dog:
     # pass
     # pass is a python statement that does nothing
     # dunder-init (double Underscores)
-    def __init__(self,name,color,vaccination_status, sound="woof"):
+    def __init__(self, name, color,vaccination_status, sound="woof"):
+        #  if you want to include the fn, ln inlucde it in innit string
+        # fn = first_name
+        # ln = last_name
+        # self.name = fn + " " + ln
         self.name = name
         self.species = "dog"
         self.color = color
         self.sound = sound
         self.vaccination_status = vaccination_status
-
+        self.barks = 0
     def __str__(self):
         return f"I am a {self.color} {self.species} named {self.name}"
     
     def speak(self):
+        self.barks += 1
         print(f"{self.name} says {self.sound}!")
     
     def yell(self):
@@ -50,5 +55,6 @@ class Person:
 
 nathan = Person('nathan', 'roo')
 # print(nathan)  prints type of obj 
-# print(nathan.dog)  output: I am a black dog named roo
+print(nathan.dog) 
+# output: I am a black dog named roo
 
